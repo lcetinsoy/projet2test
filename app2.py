@@ -1,1 +1,0 @@
-print('mise à jour feature2.py')
