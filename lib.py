@@ -1,3 +1,3 @@
 def moyenne(values):
 
-    return sum(values) /len(values)
+    return 1+sum(values) /len(values)

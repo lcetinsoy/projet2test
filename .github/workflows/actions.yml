@@ -7,5 +7,5 @@ jobs:
       - run: ls -la
       - uses: actions/checkout@v3 #permet de récupérer les fichiers dans git
       - run: ls -la
-      - run: python3 test_lib.py
+      - run: pytest test_lib.py
       
