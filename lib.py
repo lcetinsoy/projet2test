@@ -12,4 +12,4 @@ def moyenne(values):
 
     generate_log(values)
 
-    return 1+ sum(values) /len(values)
+    return sum(values) /len(values)
