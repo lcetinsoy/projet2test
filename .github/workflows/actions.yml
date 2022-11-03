@@ -1,7 +1,7 @@
 name: GitHub Actions Demo
 on: [push]
 jobs:
-  Explore-GitHub-Actions:
+  Unit tests:
     runs-on: ubuntu-latest
     steps:
       - run: ls -la
@@ -10,3 +10,13 @@ jobs:
       - run: pip3 install pytest
       - run: pytest test_lib.py
       
+  End to end tests:
+    runs-on: ubuntu-latest
+    steps:
+        - run: cypress run
+    
+  Deploy:
+    runs-on: ubuntu-latest
+    steps: 
+        - uses: actions/checkout@v3 #permet de récupérer les fichiers du dépot git
+        - run: deployment/deploy.sh
