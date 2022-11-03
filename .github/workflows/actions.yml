@@ -10,4 +10,8 @@ jobs:
       - run: pip3 install pytest
       - run: pytest test_lib.py
       
- 
+      - name: Upload logs.txt file
+        uses: actions/upload-artifact@v3
+        with:
+          name: unit-test-logs
+          path: logs.txt #je veux pouvoir accéder à logs.txt
